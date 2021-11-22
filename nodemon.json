@@ -1,0 +1,12 @@
+{
+  "verbose": false,
+  "ignore": [
+    "_scripts/*",
+    "node_modules/*",
+    ".next/*",
+    "components/*",
+    "pages/*",
+    "public/*",
+    "store/*"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "next-koa-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096 --inspect\" nodemon server",
+    "client:production": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production NODE_OPTIONS=\"--max-old-space-size=4096 --inspect\" nodemon server",
+    "client:build": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production next build",
+    "client:sitemap": "npm run client:build && node _scripts/generate-sitemap",
+    "dev": "npm run client:dev",
+    "start": "cross-env NODE_ENV=production npm run client:production",
+    "lint": "eslint --fix --ext .js,.jsx",
+    "translate": "_scripts/translate-json.bat"
+  },
+  "private": true,
+  "author": "jooy2 <jootc.help@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.24.0",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-helmet": "^6.1.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^10.1.1",
+    "mariadb": "^2.5.5",
+    "next": "^12.0.4",
+    "next-fonts": "^1.5.1",
+    "next-i18next": "^9.1.0",
+    "next-seo": "^4.28.1",
+    "node-schedule": "^2.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-actions": "^2.6.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.0",
+    "sequelize": "^6.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nextjs-sitemap-generator": "^1.3.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

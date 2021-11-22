@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "port": 3306,
+    "timezone": "+09:00",
+    "dialectOptions": {
+      "decimalNumbers": true
+    },
+    "dialect": "mariadb",
+    "operatorsAliases": 0
+  },
+  "production": {
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "port": 3306,
+    "logging": false,
+    "timezone": "+09:00",
+    "dialectOptions": {
+      "decimalNumbers": true
+    },
+    "dialect": "mariadb",
+    "operatorsAliases": 0
+  }
+}

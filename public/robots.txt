@@ -1,0 +1,2 @@
+# https://www.robotstxt.org/robotstxt.html
+Sitemap: https://example.com/sitemap.xml
