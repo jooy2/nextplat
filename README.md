@@ -1,16 +1,16 @@
 <div align="center">
 
 ![nextjs-et-logo](nextjs-et-logo.png)
-# Next.js E.T. (Easy Template)
+# Next.js E.T. (Easy-to-use Template)
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/nextjs-et/blob/master/LICENSE)
 ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/nextjs-et)
 ![Languages](https://img.shields.io/github/languages/count/jooy2/nextjs-et)
 [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
 
-Here is a Next.js example template with core features.
+Here is a **[Next.js](https://nextjs.org/)** example template with core features.
 
-It includes the following elements by default: Next.js custom server, database access, i18n translation, server scheduler and more.
+It includes the following elements by default: [Next.js custom server](https://nextjs.org/docs/advanced-features/custom-server), database access, [i18n translation](https://github.com/isaachinman/next-i18next), [server scheduler](https://github.com/node-schedule/node-schedule), and more!
 </div>
 
 ## Components
@@ -29,12 +29,22 @@ It includes the following elements by default: Next.js custom server, database a
     - `koa-helmet`
     - `node-schedule`
 
-- **ORM (Sequelize 6.11.x)**
+- **ORM: Sequelize 6.11.x**
+    - `sequelize` 
     - `mariadb` (or you can install and use the driver you want!)
 
 - **ESLint 7.x**
     - `eslint` (Code syntax checking)
     - `eslint-plugin-react-hooks`
+
+## Features
+ - ✅ Server scheduler
+ - ✅ Route-based translation
+ - ✅ Easy database schema management
+ - 🚧 Layout & theme manager (TODO)
+ - 🚧 Improved website SEO (TODO)
+ - 🚧 Sitemap generator (TODO)
+ - 🚧 Translate with one command (TODO)
 
 ## Installation
 Clone this repo using below command.
