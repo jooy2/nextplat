@@ -43,8 +43,8 @@ It includes the following elements by default: [Next.js custom server](https://n
  - ✅ Easy database schema management
  - 🚧 Layout & theme manager (TODO)
  - 🚧 Improved website SEO (TODO)
- - 🚧 Sitemap generator (TODO)
- - 🚧 Translate with one command (TODO)
+ - ✅ Sitemap generator (TODO)
+ - ✅ Translate with one command (TODO)
 
 ## Installation
 Clone this repo using below command.
