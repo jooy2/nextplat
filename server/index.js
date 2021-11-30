@@ -11,7 +11,7 @@ const { schedulerMiddleware } = require('./middlewares/scheduler');
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 // When force value is true, your data in database are reset.
-const syncOptions = (process.env.NODE_ENV === 'production') ? { /* DO NOT EDIT HERE */ } : { force: false };
+const syncOptions = dev ? { force: false } : { /* DO NOT EDIT HERE */ };
 
 const app = next({ dev });
 const handler = app.getRequestHandler();
@@ -36,7 +36,7 @@ schedulerMiddleware();
           ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
           ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
           ctx.set('Access-Control-Allow-Credentials', 'true');
-          ctx.cookies.secure = true;
+          ctx.cookies.secure = 'true';
           await nxt();
         })
         .use(helmet({

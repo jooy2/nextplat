@@ -29,7 +29,7 @@ export default class RootDocument extends Document {
           <link rel="icon" type="image/png" href="https://example.com/favicon.ico" sizes="32x32 16x16" />
           <meta charSet="utf-8" />
           <noscript>
-            JavaScript가 비활성화되었습니다. 사이트 동작이 원활하지 못할 수 있습니다.
+            Please enable JavaScript for the correct behavior of web pages.
           </noscript>
         </Head>
         <body>

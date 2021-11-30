@@ -7,8 +7,14 @@ const Memo = models.memo.build();
 
 routerMemo.post('/create', async (ctx) => {
   const { ip } = ctx;
+  const { content } = ctx.request.body;
 
-  ctx.body = { success: true, ip };
+  Memo.createMemo({
+    ip,
+    content,
+  });
+
+  ctx.body = { success: true };
   return true;
 });
 

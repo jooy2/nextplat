@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 
 const Index = () => {
   const { t } = useTranslation(['common']);
+
   return (
     <div>
       <h1>Welcome!</h1>
