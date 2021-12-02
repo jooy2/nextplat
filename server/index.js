@@ -8,6 +8,8 @@ const next = require('next');
 const models = require('./models');
 const { schedulerMiddleware } = require('./middlewares/scheduler');
 
+const routeMemo = require('./routes/memo');
+
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 // When force value is true, your data in database are reset.
@@ -60,6 +62,8 @@ schedulerMiddleware();
         }))
         .use(router.routes())
         .use(router.allowedMethods());
+
+      router.use('/memo', routeMemo.routes());
 
       router.get('(.*)', async ctx => {
         await handler(ctx.req, ctx.res);
