@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0
+}
+
+main {
+    flex: 1
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
+    height: 48px;
+    max-height: 48px;
+    line-height: 48px;
+    user-select: none
+}
+
+header div {
+    align-items: center
+}
+
+header p {
+    margin: 0;
+    color: white;
+    font-size: 1.2em
+}
+
+header.layout-page-header-container {
+    padding: 0 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    header.layout-page-header-container {
+        padding: 0 5%;
+    }
+}
+
+footer {
+    margin: 100px 0;
+    color: #838383;
+    font-size: 0.9em;
+    text-align: center
+}
+
+.layout-page-root-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column
+}
+
+.layout-page-main-container {
+    margin: 0 10%
+}
+
+@media only screen and (max-width: 768px) {
+    .layout-page-main-container {
+        margin: 0 5%
+    }
+}
+
+/* For index page */
+.main-intro h1 {
+    font-size: 2.5em
+}
+
+.main-intro p {
+    font-size: 0.95em
+}
+
+.main-intro a {
+    font-size: 0.95em;
+    color: #0075b2;
+    font-weight: bold;
+}
+
+.main-intro a:hover {
+    opacity: 0.8
+}

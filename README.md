@@ -38,13 +38,13 @@ It includes the following elements by default: [Next.js custom server](https://n
     - `eslint-plugin-react-hooks`
 
 ## Features
- - ✅ Server scheduler
  - ✅ Route-based translation
  - ✅ Easy database schema management
- - 🚧 Layout & theme manager (TODO)
- - 🚧 Improved website SEO (TODO)
- - ✅ Sitemap generator (TODO)
- - ✅ Translate with one command (TODO)
+ - ✅ Server scheduler
+ - ✅ Layout & theme manager
+ - ✅ Improved website SEO
+ - ✅ Sitemap generator
+ - ✅ Translate with one command
 
 ## Installation
 Clone this repo using below command.

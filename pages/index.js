@@ -3,21 +3,29 @@ import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { connect } from 'react-redux';
 import { useTranslation } from 'next-i18next';
+import PageRoot from '../components/layouts/PageRoot';
 
 const Index = () => {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['common', 'intro', 'menu']);
 
   return (
-    <div>
-      <h1>Welcome!</h1>
-      <p>{t('hello')}</p>
-    </div>
+    <PageRoot
+      title="Main"
+      desc="Main Page"
+    >
+      <div className="main-intro">
+        <h1>Welcome to NextJS-ET!</h1>
+        <p>{t('intro:introduce-desc-1')}</p>
+        <p>{t('intro:introduce-desc-2')}</p>
+        <a href="https://github.com/jooy2/nextjs-et">{t('menu:go-to-github')}</a>
+      </div>
+    </PageRoot>
   );
 };
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common'])),
+    ...(await serverSideTranslations(locale, ['common', 'intro', 'menu'])),
   },
 });
 
