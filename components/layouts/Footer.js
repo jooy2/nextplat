@@ -9,7 +9,7 @@ const Footer = () => (
       {' '}
       {getNextEnv('SITE_AUTHOR')}
       {' '}
-      All rights reserved
+      All rights reserved.
     </strong>
   </footer>
 );

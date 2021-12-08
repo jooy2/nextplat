@@ -29,12 +29,12 @@ header p {
 }
 
 header.layout-page-header-container {
-    padding: 0 10%;
+    padding: 0 10%
 }
 
 @media only screen and (max-width: 768px) {
     header.layout-page-header-container {
-        padding: 0 5%;
+        padding: 0 5%
     }
 }
 
@@ -73,7 +73,7 @@ footer {
 .main-intro a {
     font-size: 0.95em;
     color: #0075b2;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .main-intro a:hover {
