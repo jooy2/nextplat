@@ -1,14 +1,14 @@
 {
   "name": "next-koa-quickstart",
   "version": "1.0.0",
-  "description": "",
+  "description": "Next.js Easy-to-use Template",
   "main": "index.js",
   "scripts": {
-    "client:dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096 --inspect\" nodemon server",
+    "client:development": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096 --inspect\" nodemon server",
     "client:production": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production NODE_OPTIONS=\"--max-old-space-size=4096 --inspect\" nodemon server",
     "client:build": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production next build",
     "client:sitemap": "npm run client:build && node _scripts/generate-sitemap",
-    "dev": "npm run client:dev",
+    "dev": "npm run client:development",
     "start": "cross-env NODE_ENV=production npm run client:production",
     "lint": "eslint --fix --ext .js,.jsx",
     "translate": "_scripts/translate-json.bat"
