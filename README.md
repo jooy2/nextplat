@@ -33,7 +33,7 @@ It includes the following elements by default: [Next.js custom server](https://n
     - `sequelize` 
     - `mariadb` (or you can install and use the driver you want!)
 
-- **ESLint 7.x**
+- **ESLint 8.x**
     - `eslint` (Code syntax checking)
     - `eslint-plugin-react-hooks`
 

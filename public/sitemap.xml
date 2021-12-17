@@ -7,21 +7,21 @@
       
 	<url>
 		<loc>https://example.com/404</loc>
-		<lastmod>2021-11-26</lastmod>
+		<lastmod>2021-12-17</lastmod>
 	</url>
 
 	<url>
 		<loc>https://example.com/en/404</loc>
-		<lastmod>2021-11-26</lastmod>
+		<lastmod>2021-12-17</lastmod>
 	</url>
 
 	<url>
 		<loc>https://example.com/index</loc>
-		<lastmod>2021-11-26</lastmod>
+		<lastmod>2021-12-17</lastmod>
 	</url>
 
 	<url>
 		<loc>https://example.com/ko/404</loc>
-		<lastmod>2021-11-26</lastmod>
+		<lastmod>2021-12-17</lastmod>
 	</url>
 </urlset>
