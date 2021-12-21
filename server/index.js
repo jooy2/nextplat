@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '.env.production' });
 const Koa = require('koa');
 const Router = require('koa-router');
 const helmet = require('koa-helmet');
@@ -25,7 +26,9 @@ schedulerMiddleware();
     await app.prepare().then(() => {
       const server = new Koa();
       const router = new Router();
-      const domain = dev ? 'localhost:* *.example.com' : '*.example.com';
+      let publicDomain = process.env.NEXT_PUBLIC_BASE_URL;
+      publicDomain = publicDomain.replace(/https?:\/\//, '');
+      const cspDomain = dev ? `localhost:* *.${publicDomain}` : `*.${publicDomain}`;
 
       server.use(json({ pretty: false }));
 
@@ -44,13 +47,13 @@ schedulerMiddleware();
         .use(helmet({
           contentSecurityPolicy: {
             directives: {
-              defaultSrc: ["'self'", domain],
-              frameSrc: [domain],
+              defaultSrc: ["'self'", cspDomain],
+              frameSrc: [cspDomain],
               frameAncestors: ["'self'"],
               baseUri: ["'self'"],
-              connectSrc: ["'self'", domain],
+              connectSrc: ["'self'", cspDomain],
               scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https:'],
-              styleSrc: ["'self'", "'unsafe-inline'", domain],
+              styleSrc: ["'self'", "'unsafe-inline'", cspDomain],
               fontSrc: ["'self'", "'unsafe-inline'"],
               objectSrc: ["'self'", 'blob:'],
               formAction: ["'self'"],
