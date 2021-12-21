@@ -38,6 +38,7 @@ It includes the following elements by default: [Next.js custom server](https://n
     - `eslint-plugin-react-hooks`
 
 ## Features
+ - ✅ Structure of Next.js that can be easily and quickly understood
  - ✅ Route-based translation
  - ✅ Easy database schema management
  - ✅ Server scheduler
@@ -102,18 +103,13 @@ Note that different `development` and `production` environments use different co
 ```
 
 ### How to disable database connection?
-Remove the `models.sequelize.sync()` call part at the bottom of the `server/index.js` file, and move the `server.listen(port);` code outside.
-```javascript
-// before
-models.sequelize.sync(syncOptions).then(() => { // <-- Remove this line
-  server.listen(port);
-  console.info(`client-server is running on port ${port}!!!`);
-}); // <-- Remove this line
-
-// after
-server.listen(port);
-console.info(`client-server is running on port ${port}!!!`);
+If you do not want to use the database connection for various reasons, change the value of `NEXT_PUBLIC_USE_DATABASE` to `false` in the env file suitable for the current environment.
+```text
+NEXT_PUBLIC_USE_DATABASE=false
 ```
+This only prevents DB connection and initialization work when running the Next.js server.
+
+If you want to completely disable the database, you will need to uninstall the preinstalled `sequelize` and `mariadb` modules and delete the related code.
 
 
 ## Contribute

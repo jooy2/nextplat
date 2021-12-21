@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env.production' });
+const dotenv = require('dotenv');
 const Koa = require('koa');
 const Router = require('koa-router');
 const helmet = require('koa-helmet');
@@ -6,6 +6,7 @@ const cors = require('@koa/cors');
 const koaBody = require('koa-body');
 const json = require('koa-json');
 const next = require('next');
+const fs = require('fs');
 const models = require('./models');
 const { schedulerMiddleware } = require('./middlewares/scheduler');
 
@@ -13,17 +14,18 @@ const routeMemo = require('./routes/memo');
 
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
-// When force value is true, your data in database are reset.
-const syncOptions = dev ? { force: false } : { /* DO NOT EDIT HERE */ };
+const useDatabaseConnection = dotenv.parse(fs.readFileSync(`.env.${dev ? 'development' : 'production'}`))
+  ?.NEXT_PUBLIC_USE_DATABASE === 'true' || false;
 
 const app = next({ dev });
 const handler = app.getRequestHandler();
 
+dotenv.config({ path: '.env.production' });
 schedulerMiddleware();
 
 (async () => {
   try {
-    await app.prepare().then(() => {
+    await app.prepare().then(async () => {
       const server = new Koa();
       const router = new Router();
       let publicDomain = process.env.NEXT_PUBLIC_BASE_URL;
@@ -73,12 +75,16 @@ schedulerMiddleware();
         ctx.respond = false;
       });
 
-      models.sequelize.sync(syncOptions).then(() => {
-        server.listen(port);
-        console.info(`client-server is running on port ${port}!!!`);
-      });
+      if (useDatabaseConnection) {
+        // When force value is true, your data in database are reset.
+        await models.sequelize.sync(dev ? { force: false } : { /* DO NOT EDIT HERE */ });
+      }
+      server.listen(port);
+      // eslint-disable-next-line no-console
+      console.info(`client-server is running on port ${port}!!!`);
     });
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.error(e);
     process.exit();
   }
