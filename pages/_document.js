@@ -26,7 +26,6 @@ export default class RootDocument extends Document {
     return (
       <Html lang={locale}>
         <Head>
-          <meta httpEquiv="X-UA-Compatible" content="IE=Edge" key="X-UA-Compatible" />
           <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/icon.png`} />
           <link rel="icon" type="image/png" href={`${baseUrl}/favicon.ico`} sizes="32x32 16x16" />
           <meta charSet="utf-8" />
