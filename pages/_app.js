@@ -6,10 +6,11 @@ import '../public/css/global.css';
 
 const RootApp = ({
   Component,
+  pageProps,
   ...other
 }) => (
   <Provider store={store}>
-    <Component {...other} />
+    <Component {...other} {...pageProps} />
   </Provider>
 );
 
