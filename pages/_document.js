@@ -12,21 +12,23 @@ export default class RootDocument extends Document {
     });
 
     const initialProps = await Document.getInitialProps(ctx);
-    const { language } = ctx.req;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
     return {
       ...initialProps,
-      ...language,
+      baseUrl,
     };
   }
 
   render() {
+    const { baseUrl, locale } = this.props;
+
     return (
-      <Html lang={this.props.language}>
+      <Html lang={locale}>
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=Edge" key="X-UA-Compatible" />
-          <link rel="apple-touch-icon" sizes="180x180" href="https://example.com/icon.png" />
-          <link rel="icon" type="image/png" href="https://example.com/favicon.ico" sizes="32x32 16x16" />
+          <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/icon.png`} />
+          <link rel="icon" type="image/png" href={`${baseUrl}/favicon.ico`} sizes="32x32 16x16" />
           <meta charSet="utf-8" />
           <noscript>
             Please enable JavaScript for the correct behavior of web pages.
