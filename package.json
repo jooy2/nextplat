@@ -11,7 +11,8 @@
     "dev": "npm run client:development",
     "start": "cross-env NODE_ENV=production npm run client:production",
     "lint": "eslint --fix --ext .js,.jsx",
-    "translate": "_scripts/translate-json.bat"
+    "translate": "_scripts/translate-json.bat",
+    "init": "node _scripts/initialize.js"
   },
   "private": true,
   "author": "jooy2 <jootc.help@gmail.com>",

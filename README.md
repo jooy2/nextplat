@@ -58,6 +58,25 @@ Then, install the dependency module.
 $ npm i
 ```
 
+## Initialize the project
+Type `npm run init` in the command. Keep in mind that it is different from `npm init`.
+
+The script automatically creates an environment variable file containing the necessary variables and other public files (`manifest.json`, `robots.txt`).
+
+If you do not proceed with this process, the website may not work properly.
+
+When you do this, the previously set files may be reset.
+
+```shell
+$ npm run init
+
+[NextJS-ET] Enter your website domain (Default: example.com):
+[NextJS-ET] Enter your website author name (Default: NextJS-ET):
+[NextJS-ET] Enter your website author email (Default: admin@example.com):
+[NextJS-ET] Would you like to enable the database function? (Enter 'Y' or 'N'):
+...
+```
+
 ## Testing in development & production
 You can test your project in the development environment using the following command:
 ```shell
@@ -107,7 +126,7 @@ If you do not want to use the database connection for various reasons, change th
 ```text
 NEXT_PUBLIC_USE_DATABASE=false
 ```
-This only prevents DB connection and initialization work when running the Next.js server.
+This value can be changed by prompt when initializing the project with `npm run init`. This only prevents DB connection and initialization work when running the Next.js server.
 
 If you want to completely disable the database, you will need to uninstall the preinstalled `sequelize` and `mariadb` modules and delete the related code.
 
