@@ -15,6 +15,7 @@ const PATH_MANIFEST = 'public/manifest.json';
   rl.prompt();
 
   let domain;
+  let siteName;
   let defaultEnvProduction = '';
   let defaultEnvDevelopment = '';
   let tempStr = '';
@@ -24,6 +25,7 @@ const PATH_MANIFEST = 'public/manifest.json';
   rl.on('line', (data) => {
     switch (step) {
       case 0:
+        siteName = data;
         tempStr = `NEXT_PUBLIC_SITE_NAME=${data || 'NextJS-ET'}`;
         rl.setPrompt('[NextJS-ET] Enter your website domain (Default: example.com): ');
         break;
@@ -68,8 +70,8 @@ const PATH_MANIFEST = 'public/manifest.json';
     }
     if (done) {
       const manifest = {
-        short_name: 'NextKoaQuickstart',
-        name: 'example.com',
+        short_name: siteName,
+        name: siteName,
         icons: [
           {
             src: `${domain}/favicon.ico`,
