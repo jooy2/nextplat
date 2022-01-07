@@ -93,6 +93,52 @@ If a folder called `.next` is created at the top of the project, you can test th
 $ npm run start
 ```
 
+## Using global `PageRoot` component per page
+If you use the `components/layouts/PageRoot.js` component for each page of Next.js, you can easily include the common layout of the page as well as useful functions such as SEO and page scrolling.
+
+You can use `PageRoot` in the topmost component of each page as shown below.
+
+```javascript
+const Index = () => {
+  return (
+    <PageRoot
+      title="About Me"
+      desc="Hello."
+    >
+      <div>
+        <h1>About Me</h1>
+      </div>
+    </PageRoot>
+  );
+};
+```
+
+### Default PageRoot Props
+```json lines
+{
+  // Set the title of the meta tag to the desired value.
+  "title": string,
+  // Set the description of the meta tag to the desired value.
+  "desc":  string,
+  // Customize the text to be added to the end of the title tag. Available when the value of withTail prop is true.
+  "headerTitle": string,
+  // If this value is true, the header is enabled. (default: true)
+  "header": boolean,
+  // If this value is true, the container is enabled. (default: true)
+  "container": boolean,
+  // If this value is true, the footer is enabled. (default: true)
+  "footer": boolean,
+  // If this value is true, the site name is appended to the end of the value of the title meta tag. (default: true)
+  "withTail": boolean,
+  // If this value is true, the scroll moves to the top every time the page is moved. (default: true)
+  "scrollToTop": boolean,
+  // If this value is true, it will prevent robots.txt from indexing this page. (default: false)
+  "noIndex": boolean,
+  // Next-seo's per-page OpenGraph settings. (default: {})
+  "openGraph": object
+}
+```
+
 ## Database Configurations
 When the Next.js custom server starts, the database is initialized with the connection information. Default schema files can be defined in `server/models`.
 
