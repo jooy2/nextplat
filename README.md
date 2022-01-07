@@ -114,7 +114,7 @@ const Index = () => {
 ```
 
 ### Default PageRoot Props
-```json lines
+```javascript
 {
   // Set the title of the meta tag to the desired value.
   "title": string,
