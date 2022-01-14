@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 import PageRoot from '../components/layouts/PageRoot';
 
 const Index = () => {
-  const { t } = useTranslation(['common', 'intro', 'menu']);
+  const { t } = useTranslation(['intro', 'menu']);
 
   return (
     <PageRoot
@@ -15,8 +15,8 @@ const Index = () => {
     >
       <div className="main-intro">
         <h1>Welcome to NextJS-ET!</h1>
-        <p>{t('intro:introduce-desc-1')}</p>
-        <p>{t('intro:introduce-desc-2')}</p>
+        <p>{t('introduce-desc-1')}</p>
+        <p>{t('introduce-desc-2')}</p>
         <a href="https://github.com/jooy2/nextjs-et">{t('menu:go-to-github')}</a>
       </div>
     </PageRoot>
@@ -25,7 +25,7 @@ const Index = () => {
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common', 'intro', 'menu'])),
+    ...(await serverSideTranslations(locale, ['intro', 'menu'])),
   },
 });
 
