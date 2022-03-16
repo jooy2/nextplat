@@ -10,8 +10,10 @@ const PATH_ENV_DEVELOPMENT = '.env.development';
 const PATH_ENV_PRODUCTION = '.env.production';
 const PATH_MANIFEST = 'public/manifest.json';
 
+const PROMPT_HEAD = '[NextJS-ET] ';
+
 (async () => {
-  rl.setPrompt('[NextJS-ET] Enter your website name (Default: NextJS-ET): ');
+  rl.setPrompt(`${PROMPT_HEAD}Enter your website name (Default: NextJS-ET): `);
   rl.prompt();
 
   let domain;
@@ -27,7 +29,7 @@ const PATH_MANIFEST = 'public/manifest.json';
       case 0:
         siteName = data;
         tempStr = `NEXT_PUBLIC_SITE_NAME=${data || 'NextJS-ET'}`;
-        rl.setPrompt('[NextJS-ET] Enter your website domain (Default: example.com): ');
+        rl.setPrompt(`${PROMPT_HEAD}Enter your website domain (Default: example.com): `);
         break;
       case 1:
         domain = data.length < 1 ? 'https://example.com' : data;
@@ -38,19 +40,19 @@ const PATH_MANIFEST = 'public/manifest.json';
           domain.slice(0, -1);
         }
         tempStr = `\nNEXT_PUBLIC_BASE_URL=${domain}`;
-        rl.setPrompt('[NextJS-ET] Enter your website author name (Default: NextJS-ET): ');
+        rl.setPrompt(`${PROMPT_HEAD}Enter your website author name (Default: NextJS-ET): `);
         break;
       case 2:
         tempStr = `\nNEXT_PUBLIC_AUTHOR_NAME=${data || 'NextJS-ET'}`;
-        rl.setPrompt('[NextJS-ET] Enter your website author email (Default: admin@example.com): ');
+        rl.setPrompt(`${PROMPT_HEAD}Enter your website author email (Default: admin@example.com): `);
         break;
       case 3:
         tempStr = `\nNEXT_PUBLIC_AUTHOR_EMAIL=${data || 'admin@example.com'}`;
-        rl.setPrompt('[NextJS-ET] Would you like to enable the database function? (Enter \'Y\' or \'N\'): ');
+        rl.setPrompt(`${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `);
         break;
       case 4:
         if (data.length < 1 || (data.toLowerCase() !== 'y' && data.toLowerCase() !== 'n')) {
-          rl.setPrompt('[NextJS-ET] Would you like to enable the database function? (Enter \'Y\' or \'N\'): ');
+          rl.setPrompt(`${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `);
           rl.prompt();
         } else {
           tempStr = `\nNEXT_PUBLIC_USE_DATABASE=${data.toLowerCase() === 'y' ? 'true' : 'false'}`;
