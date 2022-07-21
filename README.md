@@ -19,7 +19,7 @@ It includes the following elements by default: [Next.js custom server](https://n
   - `next-seo` (Improve website SEO)
   - `nextjs-sitemap-generator`
 
-- **React 17.x**
+- **React 18.x**
     - `redux` (Global state management)
 
 - **Koa 2.13.x**
