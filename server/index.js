@@ -7,7 +7,6 @@ const koaBody = require('koa-body');
 const json = require('koa-json');
 const next = require('next');
 const fs = require('fs');
-const models = require('./models');
 const { schedulerMiddleware } = require('./middlewares/scheduler');
 
 const routeMemo = require('./routes/memo');
@@ -76,6 +75,9 @@ schedulerMiddleware();
       });
 
       if (useDatabaseConnection) {
+        // eslint-disable-next-line global-require
+        const models = require('./models');
+
         // When force value is true, your data in database are reset.
         await models.sequelize.sync(dev ? { force: false } : { /* DO NOT EDIT HERE */ });
       }
