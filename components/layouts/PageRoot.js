@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
@@ -23,20 +23,9 @@ const PageRoot = ({
   children,
 }) => {
   const { t } = useTranslation(['common']);
-  const [currentTitle, setCurrentTitle] = useState('');
-  const [currentDescription, setCurrentDescription] = useState('');
-  const [render, setRender] = useState(false);
+  const currentTitle = useMemo(() => `${title || t('site-title')}${withTail ? headerTitle || t('site-title-tail') : ''}`, [title, desc]);
 
   useRouterScroll({ behavior: 'auto', scroll: scrollToTop });
-
-  useEffect(() => {
-    setCurrentTitle(`${title || t('site-title')}${withTail ? headerTitle || t('site-title-tail') : ''}`);
-    setCurrentDescription(desc);
-  }, [title, desc]);
-
-  useEffect(() => {
-    setRender(true);
-  }, []);
 
   return (
     <div className="layout-page-root-wrapper">
@@ -44,7 +33,7 @@ const PageRoot = ({
         title={currentTitle}
         openGraph={openGraph || {
           title: currentTitle,
-          description: currentDescription,
+          description: desc,
           type: 'website',
           url: getNextEnv('BASE_URL'),
           images: [
@@ -63,7 +52,7 @@ const PageRoot = ({
           cardType: 'summary_large_image',
         }}
         canonical={getNextEnv('BASE_URL')}
-        description={currentDescription}
+        description={desc}
         additionalMetaTags={[{
           name: 'keywords',
           content: t('default-keywords'),
@@ -84,7 +73,7 @@ const PageRoot = ({
           href={getNextEnv('BASE_URL')}
         />
       </Head>
-      {(render && header)
+      {header
         ? (
           <Header
             title={headerTitle || title || t('site-title')}
@@ -93,9 +82,9 @@ const PageRoot = ({
         )
         : null}
       <main className={container ? 'layout-page-main-container' : ''}>
-        {render && children}
+        {children}
       </main>
-      {render && footer
+      {footer
         ? (
           <Footer />
         )
