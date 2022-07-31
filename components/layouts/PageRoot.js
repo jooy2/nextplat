@@ -24,6 +24,7 @@ const PageRoot = ({
 }) => {
   const { t } = useTranslation(['common']);
   const currentTitle = useMemo(() => `${title || t('site-title')}${withTail ? headerTitle || t('site-title-tail') : ''}`, [title, desc]);
+  const baseURL = useMemo(() => getNextEnv('BASE_URL'), []);
 
   useRouterScroll({ behavior: 'auto', scroll: scrollToTop });
 
@@ -35,10 +36,10 @@ const PageRoot = ({
           title: currentTitle,
           description: desc,
           type: 'website',
-          url: getNextEnv('BASE_URL'),
+          url: baseURL,
           images: [
             {
-              url: `${getNextEnv('BASE_URL')}/images/open-graph-default.png`,
+              url: `${baseURL}/images/open-graph-default.png`,
               width: 700,
               height: 250,
               alt: 'Site Logo',
@@ -51,7 +52,7 @@ const PageRoot = ({
           site: '@site',
           cardType: 'summary_large_image',
         }}
-        canonical={getNextEnv('BASE_URL')}
+        canonical={baseURL}
         description={desc}
         additionalMetaTags={[{
           name: 'keywords',
@@ -70,7 +71,7 @@ const PageRoot = ({
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={getNextEnv('BASE_URL')}
+          href={baseURL}
         />
       </Head>
       {header
