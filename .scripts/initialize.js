@@ -122,6 +122,6 @@ const PROMPT_HEAD = '[NextJS-ET] ';
 
   // robot.txt
   if (!fs.existsSync(PATH_ROBOT_TXT)) {
-    fs.writeFileSync(PATH_ROBOT_TXT, `# https://www.robotstxt.org/robotstxt.html\nSitemap: ${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`);
+    fs.writeFileSync(PATH_ROBOT_TXT, `# https://www.robotstxt.org/robotstxt.html\nSitemap: ${domain}/sitemap.xml`);
   }
 })();
