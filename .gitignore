@@ -3,7 +3,6 @@ sitemap.xml
 
 # env
 .db-connection.json
-.secret.json
 .env.local
 
 # Cache
