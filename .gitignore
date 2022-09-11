@@ -4,6 +4,8 @@ sitemap.xml
 # env
 .db-connection.json
 .env.local
+.env.development
+.env.production
 
 # Cache
 .json-autotranslate-cache/
