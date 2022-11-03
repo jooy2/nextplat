@@ -9,10 +9,7 @@ const Index = () => {
   const { t } = useTranslation(['intro', 'menu']);
 
   return (
-    <PageRoot
-      title="Main"
-      desc="Main Page"
-    >
+    <PageRoot title="Main" desc="Main Page">
       <div className="main-intro">
         <h1>Welcome to NextJS-ET!</h1>
         <p>{t('introduce-desc-1')}</p>
@@ -29,7 +26,7 @@ export const getServerSideProps = async ({ locale }) => ({
   },
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   common: state.common,
 });
 

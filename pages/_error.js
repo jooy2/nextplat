@@ -4,10 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import PageRoot from '../components/layouts/PageRoot';
 
 const Error = () => (
-  <PageRoot
-    title="Page Error"
-    desc="An unknown page error has occurred."
-  >
+  <PageRoot title="Page Error" desc="An unknown page error has occurred.">
     <h1>An unknown page error has occurred.</h1>
     <p>Please contact your website administrator.</p>
   </PageRoot>

@@ -9,9 +9,12 @@ const initialState = {
 
 export const setMemoContent = createAction(SET_MEMO_CONTENT, createMemo);
 
-export default handleActions({
-  [SET_MEMO_CONTENT]: (state, action) => ({
-    ...state,
-    tempContent: action.payload,
-  }),
-}, initialState);
+export default handleActions(
+  {
+    [SET_MEMO_CONTENT]: (state, action) => ({
+      ...state,
+      tempContent: action.payload,
+    }),
+  },
+  initialState,
+);

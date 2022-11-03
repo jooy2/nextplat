@@ -44,15 +44,21 @@ const PROMPT_HEAD = '[NextJS-ET] ';
         break;
       case 2:
         tempStr = `\nNEXT_PUBLIC_AUTHOR_NAME=${data || 'NextJS-ET'}`;
-        rl.setPrompt(`${PROMPT_HEAD}Enter your website author email (Default: admin@example.com): `);
+        rl.setPrompt(
+          `${PROMPT_HEAD}Enter your website author email (Default: admin@example.com): `,
+        );
         break;
       case 3:
         tempStr = `\nNEXT_PUBLIC_AUTHOR_EMAIL=${data || 'admin@example.com'}`;
-        rl.setPrompt(`${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `);
+        rl.setPrompt(
+          `${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `,
+        );
         break;
       case 4:
         if (data.length < 1 || (data.toLowerCase() !== 'y' && data.toLowerCase() !== 'n')) {
-          rl.setPrompt(`${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `);
+          rl.setPrompt(
+            `${PROMPT_HEAD}Would you like to enable the database function? (Enter \'Y\' or \'N\'): `,
+          );
           rl.prompt();
         } else {
           tempStr = `\nNEXT_PUBLIC_USE_DATABASE=${data.toLowerCase() === 'y' ? 'true' : 'false'}`;
@@ -122,6 +128,9 @@ const PROMPT_HEAD = '[NextJS-ET] ';
 
   // robot.txt
   if (!fs.existsSync(PATH_ROBOT_TXT)) {
-    fs.writeFileSync(PATH_ROBOT_TXT, `# https://www.robotstxt.org/robotstxt.html\nSitemap: ${domain}/sitemap.xml`);
+    fs.writeFileSync(
+      PATH_ROBOT_TXT,
+      `# https://www.robotstxt.org/robotstxt.html\nSitemap: ${domain}/sitemap.xml`,
+    );
   }
 })();

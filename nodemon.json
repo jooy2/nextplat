@@ -1,6 +1,4 @@
 {
   "verbose": false,
-  "watch": [
-    "server/*"
-  ]
+  "watch": ["server/*"]
 }
