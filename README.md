@@ -14,7 +14,7 @@ It includes the following elements by default: [Next.js custom server](https://n
 
 ## Components
 
-- **Next.js 12.x**
+- **Next.js 13.x**
 
   - `next-i18next` (Route-based string translation)
   - `next-seo` (Improve website SEO)
@@ -32,7 +32,7 @@ It includes the following elements by default: [Next.js custom server](https://n
   - `koa-helmet`
   - `node-schedule`
 
-- **ORM: Sequelize 6.11.x**
+- **ORM: Sequelize 6.25.x**
 
   - `sequelize`
   - `mariadb` (or you can install and use the driver you want!)
@@ -126,7 +126,7 @@ const Index = () => {
 
 ### Default PageRoot Props
 
-```json lines
+```text
 {
   // Set the title of the meta tag to the desired value.
   "title": string,
@@ -199,4 +199,4 @@ You can report issues on Github Issue. You can also request a pull to fix bugs a
 
 ## License
 
-Copyright © 2021 jooy2 Released under the MIT license.
+Copyright © 2021-2022 jooy2 Released under the MIT license.
