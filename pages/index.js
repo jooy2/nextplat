@@ -11,10 +11,10 @@ const Index = () => {
   return (
     <PageRoot title="Main" desc="Main Page">
       <div className="main-intro">
-        <h1>Welcome to NextJS-ET!</h1>
+        <h1>Welcome to NextPlat!</h1>
         <p>{t('introduce-desc-1')}</p>
         <p>{t('introduce-desc-2')}</p>
-        <a href="https://github.com/jooy2/nextjs-et">{t('menu:go-to-github')}</a>
+        <a href="https://github.com/jooy2/nextplat">{t('menu:go-to-github')}</a>
       </div>
     </PageRoot>
   );

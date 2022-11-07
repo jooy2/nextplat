@@ -1,5 +1,5 @@
 {
-  "name": "next-koa-quickstart",
+  "name": "nextplat",
   "version": "1.0.0",
   "description": "Next.js Easy-to-use Template",
   "main": "index.js",
@@ -71,10 +71,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jooy2/nextjs-et.git"
+    "url": "git+https://github.com/jooy2/nextplat.git"
   },
   "bugs": {
-    "url": "https://github.com/jooy2/nextjs-et/issues"
+    "url": "https://github.com/jooy2/nextplat/issues"
   },
-  "homepage": "https://github.com/jooy2/nextjs-et#readme"
+  "homepage": "https://github.com/jooy2/nextplat#readme"
 }

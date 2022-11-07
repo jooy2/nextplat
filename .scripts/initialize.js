@@ -10,10 +10,10 @@ const PATH_ENV_DEVELOPMENT = '.env.development';
 const PATH_ENV_PRODUCTION = '.env.production';
 const PATH_MANIFEST = 'public/manifest.json';
 
-const PROMPT_HEAD = '[NextJS-ET] ';
+const PROMPT_HEAD = '[NextPlat] ';
 
 (async () => {
-  rl.setPrompt(`${PROMPT_HEAD}Enter your website name (Default: NextJS-ET): `);
+  rl.setPrompt(`${PROMPT_HEAD}Enter your website name (Default: NextPlat): `);
   rl.prompt();
 
   let domain;
@@ -28,7 +28,7 @@ const PROMPT_HEAD = '[NextJS-ET] ';
     switch (step) {
       case 0:
         siteName = data;
-        tempStr = `NEXT_PUBLIC_SITE_NAME=${data || 'NextJS-ET'}`;
+        tempStr = `NEXT_PUBLIC_SITE_NAME=${data || 'NextPlat'}`;
         rl.setPrompt(`${PROMPT_HEAD}Enter your website domain (Default: example.com): `);
         break;
       case 1:
@@ -40,10 +40,10 @@ const PROMPT_HEAD = '[NextJS-ET] ';
           domain.slice(0, -1);
         }
         tempStr = `\nNEXT_PUBLIC_BASE_URL=${domain}`;
-        rl.setPrompt(`${PROMPT_HEAD}Enter your website author name (Default: NextJS-ET): `);
+        rl.setPrompt(`${PROMPT_HEAD}Enter your website author name (Default: NextPlat): `);
         break;
       case 2:
-        tempStr = `\nNEXT_PUBLIC_AUTHOR_NAME=${data || 'NextJS-ET'}`;
+        tempStr = `\nNEXT_PUBLIC_AUTHOR_NAME=${data || 'NextPlat'}`;
         rl.setPrompt(
           `${PROMPT_HEAD}Enter your website author email (Default: admin@example.com): `,
         );
