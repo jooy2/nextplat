@@ -74,3 +74,7 @@ typings/
 
 # IDE
 .idea/
+
+# Template only, For future project use, remove the items below.
+public/robots.txt
+public/manifest.json

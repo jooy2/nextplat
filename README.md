@@ -1,12 +1,10 @@
 <div align="center">
 
-![logo](nextplat-logo.png)
+# NextPlat
 
-# Next.js E.T. (Easy-to-use Template)
+> [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/nextplat/blob/master/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/nextplat) ![Languages](https://img.shields.io/github/languages/count/jooy2/nextplat) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/nextplat/blob/master/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/nextplat) ![Languages](https://img.shields.io/github/languages/count/jooy2/nextplat) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
-
-Here is a **[Next.js](https://nextjs.org)** example template with core features.
+Here is a **[Next.js](https://nextjs.org)** template with core features.
 
 It includes the following elements by default: [Next.js custom server](https://nextjs.org/docs/advanced-features/custom-server), database access, [i18n translation](https://github.com/isaachinman/next-i18next), [server scheduler](https://github.com/node-schedule/node-schedule), and more!
 
@@ -195,7 +193,7 @@ If you want to completely disable the database, you will need to uninstall the p
 
 ## Contribute
 
-You can report issues on Github Issue. You can also request a pull to fix bugs and add frequently used features.
+You can report issues on GitHub Issue. You can also request a pull to fix bugs and add frequently used features.
 
 ## License
 
