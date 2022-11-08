@@ -22,7 +22,7 @@ const Index = () => {
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['intro', 'menu'])),
+    ...(await serverSideTranslations(locale, ['common', 'intro', 'menu'])),
   },
 });
 

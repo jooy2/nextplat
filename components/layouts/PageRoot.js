@@ -22,7 +22,7 @@ const PageRoot = ({
   openGraph = {},
   children,
 }) => {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation('common');
   const currentTitle = useMemo(
     () => `${title || t('site-title')}${withTail ? headerTitle || t('site-title-tail') : ''}`,
     [title, desc],
