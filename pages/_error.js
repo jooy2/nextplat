@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import PageRoot from '../components/layouts/PageRoot';
 

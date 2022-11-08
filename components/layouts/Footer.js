@@ -1,4 +1,3 @@
-import React from 'react';
 import { getNextEnv } from '../../utils/helper';
 
 const Footer = () => (

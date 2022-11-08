@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = ({ title, container = true }) => (
   <header className={container ? 'layout-page-header-container' : ''}>
     <div>
