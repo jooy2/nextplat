@@ -197,4 +197,4 @@ You can report issues on GitHub Issue. You can also request a pull to fix bugs a
 
 ## License
 
-Copyright © 2021-2022 jooy2 Released under the MIT license.
+Copyright © 2021-2022 [Jooy2](https://jooy2.com) <[jooy.contact@gmail.com](mailto:jooy.contact@gmail.com)> Released under the MIT license.
