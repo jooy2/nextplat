@@ -33,7 +33,7 @@
     "next-fonts": "^1.5.1",
     "next-i18next": "^13.0.3",
     "next-seo": "^5.15.0",
-    "node-schedule": "^2.1.0",
+    "node-schedule": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.4",
