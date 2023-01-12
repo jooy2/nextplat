@@ -73,10 +73,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jooy2/nextplat.git"
+    "url": "https://github.com/jooy2/nextplat.git"
   },
   "bugs": {
     "url": "https://github.com/jooy2/nextplat/issues"
   },
-  "homepage": "https://github.com/jooy2/nextplat#readme"
+  "homepage": "https://github.com/jooy2/nextplat"
 }
