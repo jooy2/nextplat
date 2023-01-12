@@ -46,7 +46,7 @@ schedulerMiddleware();
           ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
           ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
           ctx.set('Access-Control-Allow-Credentials', 'true');
-          ctx.cookies.secure = 'true';
+          ctx.cookies.secure = true;
           await nxt();
         })
         .use(
