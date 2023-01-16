@@ -15,6 +15,7 @@
     "client:build": "cross-env GENERATE_SOURCEMAP=false NODE_ENV=production next build",
     "client:sitemap": "npm run client:build && node .scripts/generate-sitemap",
     "translate": ".scripts/translate-json.bat",
+    "translate:mac": "chmod +x .scripts/translate-json.sh && .scripts/translate-json.sh",
     "lint": "eslint --fix --ext .js,.jsx",
     "format": "prettier .",
     "format:fix": "prettier . --write"
