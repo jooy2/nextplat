@@ -37,7 +37,7 @@
     "node-schedule": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^12.1.5",
+    "react-i18next": "^12.2.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
     "redux-actions": "^2.6.5",
