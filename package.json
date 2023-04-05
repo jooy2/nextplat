@@ -46,7 +46,7 @@
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.0.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "eslint": "^8.33.0",
