@@ -43,7 +43,7 @@
     "redux-actions": "^3.0.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
-    "sequelize": "^6.30.0"
+    "sequelize": "^6.32.0"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",
