@@ -12,7 +12,7 @@ It includes the following elements by default: [Next.js custom server](https://n
 
 ## Components
 
-- **Next.js 13.x**
+- **Next.js 14.x**
 
   - `next-i18next` (Route-based string translation)
   - `next-seo` (Improve website SEO)
